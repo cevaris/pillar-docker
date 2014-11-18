@@ -1,0 +1,1 @@
+RUN puppet apply /etc/puppet/manifests/agent00.vagrant.test.pp --verbose --detailed-exitcodes || [ $? -eq 2 ]

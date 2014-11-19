@@ -1,2 +1,4 @@
 base:
-  build: base/Dockerfile
+   build: base/
+
+

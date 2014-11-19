@@ -10,7 +10,8 @@ Dockerized puppet solution for pillar
 ## Requirements
 
 boot2docker
-fig
+- [fig](www.fig.sh)
+- [boot2docker](http://boot2docker.io/)
 
 ## Setup
 

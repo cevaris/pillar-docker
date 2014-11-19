@@ -14,7 +14,7 @@ class roles::agent {
     rbenv::plugin { 'sstephenson/ruby-build': }
     rbenv::build  { $ruby_version :
       global => true
-#      onlyif => "ruby -v | grep -c ${ruby_version}",
+      onlyif => "ruby -v | grep -c ${ruby_version}",
     }
 
 }

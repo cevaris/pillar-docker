@@ -4,9 +4,6 @@ MAINTAINER Adam Cardenas "cevaris@gmail.com"
 
 
 # Prepwork
-ADD modules /etc/puppet/modules
-ADD manifests /etc/puppet/manifests
-
 RUN apt-get -y -q update \
     && apt-get -y -q install wget curl build-essential
 

@@ -1,8 +1,11 @@
+---
+base:
+  build: dockerfiles/base
 puppet:
-   build: ./puppet
+  build: dockerfiles/puppet
 agent00:
-   image: pillardocker_puppet
-   hostname: agent00.vagrant.test
-   #command: puppet apply /etc/puppet/manifests/agent00.vagrant.test.pp --verbose --detailed-exitcodes
+  image: pillardocker_puppet
+  hostname: agent00.vagrant.test
+  #command: puppet apply /etc/puppet/manifests/agent00.vagrant.test.pp --verbose --detailed-exitcodes
 
 

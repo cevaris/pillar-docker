@@ -1,7 +1,7 @@
 class roles::agent {
 
     include base
-    include monit
+    # include monit
 
     class { 'rbenv':
       install_dir => '/usr/local/rbenv',

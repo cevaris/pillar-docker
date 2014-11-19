@@ -9,15 +9,10 @@ CPUS=2
 boot2docker --memory=$MEMORY init
 
 # Share project folder to boot2docker image
-VBoxManage sharedfolder add boot2docker-vm -name project -hostpath /git/pillar-docker
-boot2Docker up
-boot2docker ssh 'sudo mkdir -p /usr/local/project'
-boot2docker ssh 'sudo mount -t vboxsf -o "defaults,uid=1000,gid=50,rw" project /usr/local/project'
-
-# Install fig
-#boot2Docker ssh 'curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /tmp/fig'
-#boot2Docker ssh 'sudo chmod +x /tmp/fig'
-#boot2Docker ssh 'sudo mv /tmp/fig /usr/local/bin/fig'
+# VBoxManage sharedfolder add boot2docker-vm -name project -hostpath /git/pillar-docker
+# boot2Docker up
+# boot2docker ssh 'sudo mkdir -p /usr/local/project'
+# boot2docker ssh 'sudo mount -t vboxsf -o "defaults,uid=1000,gid=50,rw" project /usr/local/project'
 
 # Export docker connection
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
@@ -25,4 +20,4 @@ export DOCKER_CERT_PATH=/Users/$USER/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 # SSH into VM
-boot2Docker ssh
+#boot2Docker ssh

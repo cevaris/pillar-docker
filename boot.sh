@@ -14,6 +14,8 @@ boot2docker --memory=$MEMORY init
 # boot2docker ssh 'sudo mkdir -p /usr/local/project'
 # boot2docker ssh 'sudo mount -t vboxsf -o "defaults,uid=1000,gid=50,rw" project /usr/local/project'
 
+boot2Docker up
+
 # Export docker connection
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 export DOCKER_CERT_PATH=/Users/$USER/.boot2docker/certs/boot2docker-vm
